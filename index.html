@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7c92f500f7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="main_heading">
+      <h1>To-Do List</h1>
+    </div>
+  </header>
+  <div class="modal red" id="Modal">
+    <div class="content" id="content">
+      <span id="modal-text">
+        Some Text
+      </span>
+        <button onclick="closemodal()" class="modal-btn">x</button>
+    </div>
+  </div>
+  <span class="todayDate">Date: <span id="d1"></span></span>
+  <form class="todoform">
+    <input type="text" placeholder="Add a new Task .." class="todo-input" required />
+    <div class="abc">
+    <button class="todo-button" type="submit">
+      <i class="fas fa-plus-square"></i>
+    </button>
+    <div class="select">
+        <select name="todos" class="filter-todo " style="color:black;">
+        <option value="all" style="color:black;">All</option>
+        <option value="completed" style="color:black;">Completed</option>
+        <option value="uncomplete" style="color:black;">Uncompleted</option>
+      </select>
+    </div>
+  </div>
+  <div class="alerts"></div>
+  </form>
+  <div class="todo-container">
+    <ul class="todo-list"></ul>
+  </div>
+  <button class="delete-all" onclick="deleteAll()">Delete All Tasks</button>
+
+  <script src="./index.js"></script>
+  
+</body>
+
+</html>
